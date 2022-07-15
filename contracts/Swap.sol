@@ -65,7 +65,7 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
 
         setChainlinkToken(_chainlinkToken);
         setChainlinkOracle(_chainlinkOracle);
-        jobId = '7d80a6386ef543a3abb52817f6707e3b';
+        jobId = 'ca98366cc7314957b8c012c72f05aeeb';
         fee = (1 * LINK_DIVISIBILITY) / 10; // 0,1 * 10**18 (Varies by network and job)
     }
 
@@ -114,7 +114,7 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
     }
 
     function addLiquidity(uint256 amountA, uint256 amountB) external onlyOwner {
-        require(amountA * rate == amountB, "amountA should be equal with amountB");
+        require((amountA * rate)/10**8 == amountB, "amountA should be equal with amountB");
         TransferHelper.safeTransferFrom(tokenA, msg.sender, address(this), amountA);
         TransferHelper.safeTransferFrom(tokenB, msg.sender, address(this), amountB);
         reserveA = reserveA + amountA;
@@ -122,7 +122,7 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
     }
 
     function removeLiquidity(uint256 amountA, uint256 amountB) external onlyOwner {
-        require(amountA * rate == amountB, "amountA should be equal with amountB");
+        require((amountA * rate)/10**8 == amountB, "amountA should be equal with amountB");
         TransferHelper.safeTransfer(tokenA, _msgSender(), amountA);
         TransferHelper.safeTransfer(tokenB, _msgSender(), amountB);
         reserveA = reserveA - amountA;
@@ -189,11 +189,11 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
         TransferHelper.safeTransfer(tokenB, msg.sender, reserveB);
     }
 
-    function modifyChainlinkTokenAddr(address _newChainlinkAddr) public {
+    function modifyChainlinkTokenAddr(address _newChainlinkAddr) public onlyOwner{
         setChainlinkToken(_newChainlinkAddr);
     }
 
-    function modifyChainlinkOracleAddr(address _newChainlinkOracleAddr) public {
+    function modifyChainlinkOracleAddr(address _newChainlinkOracleAddr) public onlyOwner{
         setChainlinkOracle(_newChainlinkOracleAddr);
     }
 

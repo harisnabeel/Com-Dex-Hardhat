@@ -1,0 +1,1193 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x7a81600df49087E352D849F8445bdFb98f146F07",
+    "txHash": "0x59de8d172ec91a873a8e612c9a968f16eca72b7b8da2be46676a596ead4c0335"
+  },
+  "proxies": [
+    {
+      "address": "0x5BD172883641AC92C0c912d52614B77cAAcDE4cf",
+      "txHash": "0xed9bc5c3717ec23515f6de190eaa96bbe1d3c2a5889fd267964a7321cf1792f6",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x18713dA4FC24FaAF93812bd21e55CB584027bC28",
+      "txHash": "0xbee783036c6e2a9a526edfcd0dc1fbee072e5cad68c83df346d7266d8e970388",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x33cdd23A090250E081cea012d8a1F2bB02a9adf5",
+      "txHash": "0xae936ff80cf2cc4435b72982d2af00c7f41022825e018570eb11a96933c92018",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xe19927F31de35433E875F5e12720bC205dcBC671",
+      "txHash": "0xd2063c894deb259a5a4033be7ee97373b06ce7ede5dfb1d82bdfd985de782259",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x3F405eE19655ff53cf1d61ABaB1dF406e285e11F",
+      "txHash": "0x0e8026e645d35c176c6f2865355a1909330e4858b815afee69f670fed85da5f7",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x56e9F07C25e8A8f39B5ad232A141DC9884cC73AE",
+      "txHash": "0x6ba58934dfd9a3ca816b6fd7f6d2b2fc171038c639d600a06f7bec1886911076",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xcABeB48Da2D9F985332b95cec425090bdd213bB2",
+      "txHash": "0xcbb852c82ee27ef1337d2c5b42d4330f853cfc5083d225968f12c1c979e7979b",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x8A61D3EeC849F10206a38E0e0fcf79FE5C61C801",
+      "txHash": "0xa895e2e349a809a29cda068e81308d5a4aeeeec835431b0fc903598e23dd6edf",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x59DA703a0b22d5Fc906A6a71f9A6fB3401cF16Fd",
+      "txHash": "0x38e9021e9f1e2af0f55f39a7f912277e8821b788f8400104a3076c186b0b07f9",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xfD5410E0EDa2BC841b3Eee64421EAB800d89Ff93",
+      "txHash": "0xdedf275cfc8f87a2d7268d95e4dc9e1c1ff496c8367ff59a325c29a5b23f150c",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x609236d36B4Cf6583Dc54565a0038dE53598b9F5",
+      "txHash": "0xfae19c79c6f1f0e5e5a82b2f2506dac6d3f9603edfdcccfa5e07cbcc6f41253e",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x2641a6730AFa9379fF41b6326411EE619b1F0AA9",
+      "txHash": "0xeb046d5426e9131947b0fc2cff587a697b946b92f20db1e05f5941c8c619a571",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x550C9b9Bf558832ea65AbEf5E79b153BAa22BE1b",
+      "txHash": "0x1ebfbc572eea684d60562ba47dd342944bf20c7d2b6b582d41dadc700261116a",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x5A470A710d3D0e2aA51b1fd84f9a14f391cF35F5",
+      "txHash": "0xd4d302469ff37d5d9658cb01214b76c0777f1bf740d763d637237435067e0520",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "80834362cc131cf79cb5e8f948fbec595a6e9ea5c5b783a1493999d642837d97": {
+      "address": "0xF620aE51514a558Ec03679ea1726554DffbE2e62",
+      "txHash": "0x418da71f79f5e57f403975eade86c7b1ff47f12c3caa3cefea3376459ed94dba",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:37"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:39"
+          },
+          {
+            "label": "_totalSupply",
+            "offset": 0,
+            "slot": "53",
+            "type": "t_uint256",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:41"
+          },
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "54",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:43"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "55",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:44"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "56",
+            "type": "t_array(t_uint256)45_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:394"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)45_storage": {
+            "label": "uint256[45]",
+            "numberOfBytes": "1440"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "2c6f392bc2005da2580e2e7679d45d8bda0154fac9d2e9d93ac9fc2ef82dcf47": {
+      "address": "0x3E2cdf946F7f96B3555B5F3128Aa3f1d03aa18E8",
+      "txHash": "0xdba684547c0ef772227846efb2a2946a7ac81a05990446f8a7997266425e24e6",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "LINK_DIVISIBILITY",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:21"
+          },
+          {
+            "label": "AMOUNT_OVERRIDE",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:22"
+          },
+          {
+            "label": "SENDER_OVERRIDE",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_address",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:23"
+          },
+          {
+            "label": "ORACLE_ARGS_VERSION",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:24"
+          },
+          {
+            "label": "OPERATOR_ARGS_VERSION",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:25"
+          },
+          {
+            "label": "ENS_TOKEN_SUBNAME",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_bytes32",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:26"
+          },
+          {
+            "label": "ENS_ORACLE_SUBNAME",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_bytes32",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:27"
+          },
+          {
+            "label": "LINK_TOKEN_POINTER",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_address",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:28"
+          },
+          {
+            "label": "s_ens",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_contract(ENSInterface)427",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:30"
+          },
+          {
+            "label": "s_ensNode",
+            "offset": 0,
+            "slot": "110",
+            "type": "t_bytes32",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:31"
+          },
+          {
+            "label": "s_link",
+            "offset": 0,
+            "slot": "111",
+            "type": "t_contract(LinkTokenInterface)522",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:32"
+          },
+          {
+            "label": "s_oracle",
+            "offset": 0,
+            "slot": "112",
+            "type": "t_contract(OperatorInterface)602",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:33"
+          },
+          {
+            "label": "s_requestCount",
+            "offset": 0,
+            "slot": "113",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:34"
+          },
+          {
+            "label": "s_pendingRequests",
+            "offset": 0,
+            "slot": "114",
+            "type": "t_mapping(t_bytes32,t_address)",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:35"
+          },
+          {
+            "label": "reserveA",
+            "offset": 0,
+            "slot": "115",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:12"
+          },
+          {
+            "label": "reserveB",
+            "offset": 0,
+            "slot": "116",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:13"
+          },
+          {
+            "label": "feeA_Storage",
+            "offset": 0,
+            "slot": "117",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:14"
+          },
+          {
+            "label": "feeB_Storage",
+            "offset": 0,
+            "slot": "118",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:15"
+          },
+          {
+            "label": "rate",
+            "offset": 0,
+            "slot": "119",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:17"
+          },
+          {
+            "label": "fee",
+            "offset": 0,
+            "slot": "120",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:18"
+          },
+          {
+            "label": "lastTimeStamp",
+            "offset": 0,
+            "slot": "121",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:20"
+          },
+          {
+            "label": "lastPriceFeed",
+            "offset": 0,
+            "slot": "122",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:21"
+          },
+          {
+            "label": "rateTimeOut",
+            "offset": 0,
+            "slot": "123",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:22"
+          },
+          {
+            "label": "verifiedNode",
+            "offset": 0,
+            "slot": "124",
+            "type": "t_address",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:27"
+          },
+          {
+            "label": "jobId",
+            "offset": 0,
+            "slot": "125",
+            "type": "t_bytes32",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:28"
+          },
+          {
+            "label": "tokenA",
+            "offset": 0,
+            "slot": "126",
+            "type": "t_address",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:30"
+          },
+          {
+            "label": "tokenB",
+            "offset": 0,
+            "slot": "127",
+            "type": "t_address",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:31"
+          },
+          {
+            "label": "commDexName",
+            "offset": 0,
+            "slot": "128",
+            "type": "t_string_storage",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:33"
+          },
+          {
+            "label": "tradeFee",
+            "offset": 0,
+            "slot": "129",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:34"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(ENSInterface)427": {
+            "label": "contract ENSInterface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(LinkTokenInterface)522": {
+            "label": "contract LinkTokenInterface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(OperatorInterface)602": {
+            "label": "contract OperatorInterface",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_bytes32,t_address)": {
+            "label": "mapping(bytes32 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "c2d6eca285556ee81103371bd765560fa50d2b89845fb30a8ad8678f37b7ac64": {
+      "address": "0xC95dAcac54A84776C6e8568E0a62BF1be4C7710D",
+      "txHash": "0x801ecbe5dcbd62228fa72d1f3011e4ea846cb4895f899092e8b42cfb013e37ed",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "LINK_DIVISIBILITY",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:21"
+          },
+          {
+            "label": "AMOUNT_OVERRIDE",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:22"
+          },
+          {
+            "label": "SENDER_OVERRIDE",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_address",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:23"
+          },
+          {
+            "label": "ORACLE_ARGS_VERSION",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:24"
+          },
+          {
+            "label": "OPERATOR_ARGS_VERSION",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:25"
+          },
+          {
+            "label": "ENS_TOKEN_SUBNAME",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_bytes32",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:26"
+          },
+          {
+            "label": "ENS_ORACLE_SUBNAME",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_bytes32",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:27"
+          },
+          {
+            "label": "LINK_TOKEN_POINTER",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_address",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:28"
+          },
+          {
+            "label": "s_ens",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_contract(ENSInterface)427",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:30"
+          },
+          {
+            "label": "s_ensNode",
+            "offset": 0,
+            "slot": "110",
+            "type": "t_bytes32",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:31"
+          },
+          {
+            "label": "s_link",
+            "offset": 0,
+            "slot": "111",
+            "type": "t_contract(LinkTokenInterface)522",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:32"
+          },
+          {
+            "label": "s_oracle",
+            "offset": 0,
+            "slot": "112",
+            "type": "t_contract(OperatorInterface)602",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:33"
+          },
+          {
+            "label": "s_requestCount",
+            "offset": 0,
+            "slot": "113",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:34"
+          },
+          {
+            "label": "s_pendingRequests",
+            "offset": 0,
+            "slot": "114",
+            "type": "t_mapping(t_bytes32,t_address)",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:35"
+          },
+          {
+            "label": "reserveA",
+            "offset": 0,
+            "slot": "115",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:12"
+          },
+          {
+            "label": "reserveB",
+            "offset": 0,
+            "slot": "116",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:13"
+          },
+          {
+            "label": "feeA_Storage",
+            "offset": 0,
+            "slot": "117",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:14"
+          },
+          {
+            "label": "feeB_Storage",
+            "offset": 0,
+            "slot": "118",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:15"
+          },
+          {
+            "label": "rate",
+            "offset": 0,
+            "slot": "119",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:17"
+          },
+          {
+            "label": "fee",
+            "offset": 0,
+            "slot": "120",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:18"
+          },
+          {
+            "label": "lastTimeStamp",
+            "offset": 0,
+            "slot": "121",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:20"
+          },
+          {
+            "label": "lastPriceFeed",
+            "offset": 0,
+            "slot": "122",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:21"
+          },
+          {
+            "label": "rateTimeOut",
+            "offset": 0,
+            "slot": "123",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:22"
+          },
+          {
+            "label": "verifiedNode",
+            "offset": 0,
+            "slot": "124",
+            "type": "t_address",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:27"
+          },
+          {
+            "label": "jobId",
+            "offset": 0,
+            "slot": "125",
+            "type": "t_bytes32",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:28"
+          },
+          {
+            "label": "tokenA",
+            "offset": 0,
+            "slot": "126",
+            "type": "t_address",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:30"
+          },
+          {
+            "label": "tokenB",
+            "offset": 0,
+            "slot": "127",
+            "type": "t_address",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:31"
+          },
+          {
+            "label": "commDexName",
+            "offset": 0,
+            "slot": "128",
+            "type": "t_string_storage",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:33"
+          },
+          {
+            "label": "tradeFee",
+            "offset": 0,
+            "slot": "129",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:34"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(ENSInterface)427": {
+            "label": "contract ENSInterface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(LinkTokenInterface)522": {
+            "label": "contract LinkTokenInterface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(OperatorInterface)602": {
+            "label": "contract OperatorInterface",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_bytes32,t_address)": {
+            "label": "mapping(bytes32 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "16aeab852002e32836b410e320ad2f91f4d8a90eeb5b87e99e842746185ba0f7": {
+      "address": "0x19d922a0246978d1C4ba0cC14962d9690BFf08cD",
+      "txHash": "0x80379cc1a2ba9cf6ba9ebea936b89f97842c16cd5ded3eb9dd4fdab959ab8dbf",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "LINK_DIVISIBILITY",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:21"
+          },
+          {
+            "label": "AMOUNT_OVERRIDE",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:22"
+          },
+          {
+            "label": "SENDER_OVERRIDE",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_address",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:23"
+          },
+          {
+            "label": "ORACLE_ARGS_VERSION",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:24"
+          },
+          {
+            "label": "OPERATOR_ARGS_VERSION",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:25"
+          },
+          {
+            "label": "ENS_TOKEN_SUBNAME",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_bytes32",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:26"
+          },
+          {
+            "label": "ENS_ORACLE_SUBNAME",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_bytes32",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:27"
+          },
+          {
+            "label": "LINK_TOKEN_POINTER",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_address",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:28"
+          },
+          {
+            "label": "s_ens",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_contract(ENSInterface)427",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:30"
+          },
+          {
+            "label": "s_ensNode",
+            "offset": 0,
+            "slot": "110",
+            "type": "t_bytes32",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:31"
+          },
+          {
+            "label": "s_link",
+            "offset": 0,
+            "slot": "111",
+            "type": "t_contract(LinkTokenInterface)522",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:32"
+          },
+          {
+            "label": "s_oracle",
+            "offset": 0,
+            "slot": "112",
+            "type": "t_contract(OperatorInterface)602",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:33"
+          },
+          {
+            "label": "s_requestCount",
+            "offset": 0,
+            "slot": "113",
+            "type": "t_uint256",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:34"
+          },
+          {
+            "label": "s_pendingRequests",
+            "offset": 0,
+            "slot": "114",
+            "type": "t_mapping(t_bytes32,t_address)",
+            "contract": "ChainlinkClientUpgradeable",
+            "src": "contracts\\ChainlinkClientUpgradeable.sol:35"
+          },
+          {
+            "label": "reserveA",
+            "offset": 0,
+            "slot": "115",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:12"
+          },
+          {
+            "label": "reserveB",
+            "offset": 0,
+            "slot": "116",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:13"
+          },
+          {
+            "label": "feeA_Storage",
+            "offset": 0,
+            "slot": "117",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:14"
+          },
+          {
+            "label": "feeB_Storage",
+            "offset": 0,
+            "slot": "118",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:15"
+          },
+          {
+            "label": "rate",
+            "offset": 0,
+            "slot": "119",
+            "type": "t_string_storage",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:17"
+          },
+          {
+            "label": "fee",
+            "offset": 0,
+            "slot": "120",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:18"
+          },
+          {
+            "label": "lastTimeStamp",
+            "offset": 0,
+            "slot": "121",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:20"
+          },
+          {
+            "label": "lastPriceFeed",
+            "offset": 0,
+            "slot": "122",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:21"
+          },
+          {
+            "label": "rateTimeOut",
+            "offset": 0,
+            "slot": "123",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:22"
+          },
+          {
+            "label": "verifiedNode",
+            "offset": 0,
+            "slot": "124",
+            "type": "t_address",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:27"
+          },
+          {
+            "label": "jobId",
+            "offset": 0,
+            "slot": "125",
+            "type": "t_bytes32",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:28"
+          },
+          {
+            "label": "tokenA",
+            "offset": 0,
+            "slot": "126",
+            "type": "t_address",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:30"
+          },
+          {
+            "label": "tokenB",
+            "offset": 0,
+            "slot": "127",
+            "type": "t_address",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:31"
+          },
+          {
+            "label": "commDexName",
+            "offset": 0,
+            "slot": "128",
+            "type": "t_string_storage",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:33"
+          },
+          {
+            "label": "tradeFee",
+            "offset": 0,
+            "slot": "129",
+            "type": "t_uint256",
+            "contract": "Swap",
+            "src": "contracts\\Swap.sol:34"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(ENSInterface)427": {
+            "label": "contract ENSInterface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(LinkTokenInterface)522": {
+            "label": "contract LinkTokenInterface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(OperatorInterface)602": {
+            "label": "contract OperatorInterface",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_bytes32,t_address)": {
+            "label": "mapping(bytes32 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    }
+  }
+}

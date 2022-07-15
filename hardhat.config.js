@@ -26,6 +26,11 @@ module.exports = {
     rinkeby: {
       url: process.env.URL,
       accounts: [process.env.PRIVATE_KEY],
+      
+    },
+    kovan: {
+      url: process.env.URL,
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
   etherscan: {

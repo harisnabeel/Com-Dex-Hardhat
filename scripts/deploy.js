@@ -44,27 +44,73 @@ async function main() {
   // await tokenBImplementation.deployed();
 
   // We get the contract to deploy
-  const Swap = await ethers.getContractFactory("Swap");
-  const swap = await upgrades.deployProxy(
-    Swap,
-    [
+  // const Swap = await ethers.getContractFactory("Swap");
+  // const swap = await upgrades.deployProxy(
+  //   Swap,
+  //   [
+  //     tokenA.address,
+  //     tokenB.address,
+  //     accounts[0].address,
+  //     // "0xa36085F69e2889c224210F603D836748e7dC0088",
+  //     "0x01be23585060835e02b77ef475b0cc51aa1e0709",
+  //     // "0x74EcC8Bdeb76F2C6760eD2dc8A46ca5e581fA656",
+  //     "0xf3fbb7f3391f62c8fe53f89b41dfc8159ee9653f",
+  //     "Com-dex",
+  //     5,
+  //     180,
+  //   ],
+  //   {
+  //     initializer:
+  //       "initialize(address,address,address,address,address,string,uint,uint)",
+  //   }
+  // );
+
+  // await swap.deployed();
+  // console.log("Swap deployed to:", swap.address);
+
+  const SwapFactory = await ethers.getContractFactory("SwapFactory");
+  const swapFactory = await SwapFactory.deploy();
+  await swapFactory.deployed();
+  console.log("SwapFactory is deployed at: ", swapFactory.address);
+  await swapFactory.createSwap(  
       tokenA.address,
       tokenB.address,
       accounts[0].address,
+      // "0xa36085F69e2889c224210F603D836748e7dC0088",
       "0x01be23585060835e02b77ef475b0cc51aa1e0709",
+      // "0x74EcC8Bdeb76F2C6760eD2dc8A46ca5e581fA656",
       "0xf3fbb7f3391f62c8fe53f89b41dfc8159ee9653f",
       "Com-dex",
       5,
-      180,
-    ],
-    {
-      initializer:
-        "initialize(address,address,address,address,address,string,uint,uint)",
-    }
-  );
+      180,);
 
-  await swap.deployed();
-  console.log("Swap deployed to:", swap.address);
+
+      const result = await swapFactory.getSwaps();
+      console.log("this is result ", result[0]);
+
+      const swap1 = await ethers.getContractFactory("Swap");
+       const Swap1 = await swap1.attach(
+         result[0]
+       );
+      //  await Swap1.initialize();
+      const a = await Swap1.tokenA();
+      console.log(a,"this is swap1 address");
+      //  console.log("swap1 initaizled");
+      // const a = await Swap1.xyz(
+      //   tokenA.address,
+      //   tokenB.address,
+      //   accounts[0].address,
+      //   // "0xa36085F69e2889c224210F603D836748e7dC0088",
+      //   "0x01be23585060835e02b77ef475b0cc51aa1e0709",
+      //   // "0x74EcC8Bdeb76F2C6760eD2dc8A46ca5e581fA656",
+      //   "0xf3fbb7f3391f62c8fe53f89b41dfc8159ee9653f",
+      //   "Com-dex",
+      //   5,
+      //   180
+      // );
+      // console.log(a,"resut");
+
+  // await swap.swap("40000000000000000000", tokenB.address, tokenA.address);
   
   // let swapImplementation = await upgrades.erc1967.getImplementationAddress(
   //   swap.address,
