@@ -34,13 +34,15 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
     uint256 public tradeFee;
 
     event LowTokenBalance(address Token, uint256 balanceLeft);
-    event RequestRate(bytes32 indexed requestRate, uint256 rate);
-
+    event RequestRateFulfilled(bytes32 indexed requestRate, uint256 rate);
+    event Swapped(address indexed sender, uint256 amountIn, uint256 amountOut, uint256 isSale);
+    event LiquidityAdded(address indexed sender, uint256 amountA, uint256 amountB);
+    event LiquidityRemoved(address indexed sender, uint256 amountA, uint256 amountB);
+    
     modifier onlyVerifiedNode() {
         require(_msgSender() == verifiedNode, "caller should be verified node's address");
         _;
     }
-
     function initialize(
         address _tokenA, 
         address _tokenB, 
@@ -53,6 +55,7 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
     ) public initializer {
 		__Ownable_init();
         initialize();
+
         tokenA = _tokenA;
         tokenB = _tokenB;
         verifiedNode = _verifiedNode;
@@ -90,6 +93,7 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
             reserveA = reserveA + amountA;
             reserveB = reserveB - amountB;
             feeA_Storage = feeA_Storage + amountFee;
+            emit Swapped(msg.sender, _amountIn, amountA, 1);
         } else {
             uint256 amountB = _amountIn - amountFee;
             uint256 amountA = amountB * (10**8) / lastPriceFeed;
@@ -105,6 +109,8 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
             reserveA = reserveA - amountA;
             reserveB = reserveB + amountB;
             feeB_Storage = feeB_Storage + amountFee;
+            emit Swapped(msg.sender, _amountIn, amountA,0);
+
         }
     }
 
@@ -119,6 +125,8 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
         TransferHelper.safeTransferFrom(tokenB, msg.sender, address(this), amountB);
         reserveA = reserveA + amountA;
         reserveB = reserveB + amountB;
+
+        emit LiquidityAdded(_msgSender(), amountA, amountB);
     }
 
     function removeLiquidity(uint256 amountA, uint256 amountB) external onlyOwner {
@@ -127,6 +135,8 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
         TransferHelper.safeTransfer(tokenB, _msgSender(), amountB);
         reserveA = reserveA - amountA;
         reserveB = reserveB - amountB;
+
+        emit LiquidityRemoved(_msgSender(), amountA, amountB);
     }
 
     function requestVolumeData(uint256 flag) public returns (bytes32 requestRate) {
@@ -162,7 +172,7 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
     // rate between token A and token B * (10**8)
 
     function fulfill(bytes32 _requestRate, uint256 _rate) public recordChainlinkFulfillment(_requestRate) {
-        emit RequestRate(_requestRate, _rate);
+        emit RequestRateFulfilled(_requestRate, _rate);
         rate = _rate;
     }   
 

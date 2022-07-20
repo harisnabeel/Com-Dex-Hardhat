@@ -10,6 +10,7 @@ contract SwapFactory {
         require(_swaps.length < 1000 , "You reached out limitation");
         Swap swap = new Swap();
         swap.initialize(_tokenA, _tokenB, _verifiedNode, _chainlinkToken, _chainlinkOracle, _commDexName, _tradeFee, _rateTimeOut);
+        swap.transferOwnership(msg.sender);
         _swaps.push(swap);
     }
 

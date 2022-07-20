@@ -1,7 +1,5 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-
-import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@chainlink/contracts/src/v0.8/Chainlink.sol";
 import "@chainlink/contracts/src/v0.8/interfaces/ENSInterface.sol";
 import "@chainlink/contracts/src/v0.8/interfaces/LinkTokenInterface.sol";
@@ -15,7 +13,7 @@ import {ENSResolver as ENSResolver_Chainlink} from "@chainlink/contracts/src/v0.
  * @notice Contract writers can inherit this contract in order to create requests for the
  * Chainlink network
  */
-abstract contract ChainlinkClientUpgradeable is Initializable {
+abstract contract ChainlinkClientUpgradeable {
   using Chainlink for Chainlink.Request;
 
   uint256 internal LINK_DIVISIBILITY;
@@ -33,12 +31,19 @@ abstract contract ChainlinkClientUpgradeable is Initializable {
   OperatorInterface private s_oracle;
   uint256 private s_requestCount;
   mapping(bytes32 => address) private s_pendingRequests;
+  bool private initialized  = false;
 
   event ChainlinkRequested(bytes32 indexed id);
   event ChainlinkFulfilled(bytes32 indexed id);
   event ChainlinkCancelled(bytes32 indexed id);
 
-  function initialize() public initializer {
+  modifier notInitialized (){
+    require(!initialized,'CLU: Already Initialized');
+    _;
+  }
+
+  function initialize() public notInitialized() {
+    initialized = true;
     LINK_DIVISIBILITY = 10**18;
     AMOUNT_OVERRIDE = 0;
     SENDER_OVERRIDE = address(0);
