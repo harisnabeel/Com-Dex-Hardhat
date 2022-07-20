@@ -17,14 +17,14 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
     uint256 public rate;
     uint256 private fee;
     
-    uint256 lastTimeStamp;
-    uint256 lastPriceFeed;
-    uint256 rateTimeOut;
+    uint256 public lastTimeStamp;
+    uint256 public lastPriceFeed;
+    uint256 public rateTimeOut;
     
     using Chainlink for Chainlink.Request;
 
     // address of verified off-chain node
-    address verifiedNode;
+    address public verifiedNode;
     bytes32 jobId;
 
     address public tokenA;
