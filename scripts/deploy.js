@@ -86,15 +86,15 @@ async function main() {
 
 
       const result = await swapFactory.getSwaps();
-      console.log("this is result ", result[0]);
+      console.log("this is new Swap deployed ", result[0]);
 
       const swap1 = await ethers.getContractFactory("Swap");
        const Swap1 = await swap1.attach(
          result[0]
        );
-      //  await Swap1.initialize();
-      const a = await Swap1.tokenA();
-      console.log(a,"this is swap1 address");
+      // //  await Swap1.initialize();
+      // const a = await Swap1.tokenA();
+      // console.log(a,"this is swap1 address");
       //  console.log("swap1 initaizled");
       // const a = await Swap1.xyz(
       //   tokenA.address,

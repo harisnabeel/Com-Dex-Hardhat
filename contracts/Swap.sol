@@ -87,12 +87,13 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
             if(reserveB < amountB) emit LowTokenBalance(tokenB, reserveB);
             require(reserveB >= amountB, "not enough balance");
 
-            TransferHelper.safeTransferFrom(tokenA, msg.sender, address(this), amountA);
-            TransferHelper.safeTransfer(tokenB, msg.sender, amountB);
-
             reserveA = reserveA + amountA;
             reserveB = reserveB - amountB;
             feeA_Storage = feeA_Storage + amountFee;
+
+            TransferHelper.safeTransferFrom(tokenA, msg.sender, address(this), amountA);
+            TransferHelper.safeTransfer(tokenB, msg.sender, amountB);
+
             emit Swapped(msg.sender, _amountIn, amountA, 1);
         } else {
             uint256 amountB = _amountIn - amountFee;
@@ -103,12 +104,13 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
             if(reserveA < amountA) emit LowTokenBalance(tokenA, reserveA);
             require(reserveA >= amountA, "not enough balance");
 
-            TransferHelper.safeTransfer(tokenA, msg.sender, amountA);
-            TransferHelper.safeTransferFrom(tokenB, msg.sender, address(this), amountB);
-
             reserveA = reserveA - amountA;
             reserveB = reserveB + amountB;
             feeB_Storage = feeB_Storage + amountFee;
+            
+            TransferHelper.safeTransferFrom(tokenB, msg.sender, address(this), amountB);
+            TransferHelper.safeTransfer(tokenA, msg.sender, amountA);
+
             emit Swapped(msg.sender, _amountIn, amountA,0);
 
         }
@@ -189,14 +191,19 @@ contract Swap is Initializable, OwnableUpgradeable, ChainlinkClientUpgradeable {
         
         TransferHelper.safeTransfer(tokenA, msg.sender, feeA_Storage);
         TransferHelper.safeTransfer(tokenB, msg.sender, feeB_Storage);
+        feeA_Storage = 0;
+        feeB_Storage = 0;
     }
 
     function emergencyWithdraw() external onlyOwner {
         TransferHelper.safeTransfer(tokenA, msg.sender, feeA_Storage);
         TransferHelper.safeTransfer(tokenB, msg.sender, feeB_Storage);
-
+        feeA_Storage = 0;
+        feeB_Storage = 0;
         TransferHelper.safeTransfer(tokenA, msg.sender, reserveA);
         TransferHelper.safeTransfer(tokenB, msg.sender, reserveB);
+        reserveA = 0;
+        reserveB = 0;
     }
 
     function modifyChainlinkTokenAddr(address _newChainlinkAddr) public onlyOwner{
